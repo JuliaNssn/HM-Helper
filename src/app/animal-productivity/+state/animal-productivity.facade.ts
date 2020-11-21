@@ -1,14 +1,14 @@
-import { Injectable } from "@angular/core";
-import { select, Store } from "@ngrx/store";
-import { Observable } from "rxjs";
-import { Animal, AnimalEntity } from "./data-access/data-access.model";
-import * as fromAnimalProductivity from "./animal-productivity.reducer";
-import * as AnimalProductivitySelectors from "./animal-productivity.selectors";
+import { Injectable } from '@angular/core';
+import { select, Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { Animal, AnimalEntity } from './data-access/data-access.model';
+import * as fromAnimalProductivity from './animal-productivity.reducer';
+import * as AnimalProductivitySelectors from './animal-productivity.selectors';
 import {
   createAnimal,
   deleteAnimal,
   updateAnimal,
-} from "./animal-productivity.actions";
+} from './animal-productivity.actions';
 
 @Injectable()
 export class AnimalProductivityFacade {
@@ -20,7 +20,7 @@ export class AnimalProductivityFacade {
   );
   selectedAnimal$: Observable<Animal> = this.store.pipe(
     select(AnimalProductivitySelectors.getSelectedAnimal)
-  );
+  ) as Observable<Animal>;
 
   constructor(
     private store: Store<fromAnimalProductivity.AnimalProductivityPartialState>

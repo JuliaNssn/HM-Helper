@@ -1,9 +1,9 @@
-import { createEntityAdapter, EntityAdapter, EntityState } from "@ngrx/entity";
-import * as AnimalProductivityActions from "./animal-productivity.actions";
-import { Action, createReducer, on } from "@ngrx/store";
-import { Animal, AnimalEntity } from "./data-access/data-access.model";
+import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
+import * as AnimalProductivityActions from './animal-productivity.actions';
+import { Action, createReducer, on } from '@ngrx/store';
+import { Animal, AnimalEntity } from './data-access/data-access.model';
 
-export const ANIMAL_PRODUCTIVITY_FEATURE_KEY = "animal-productivity";
+export const ANIMAL_PRODUCTIVITY_FEATURE_KEY = 'animal-productivity';
 
 export interface State extends EntityState<Animal> {
   animalEntities: AnimalEntity[];
@@ -22,7 +22,7 @@ export const animalProductivityAdapter: EntityAdapter<Animal> = createEntityAdap
 
 export const initialState: State = animalProductivityAdapter.getInitialState({
   animalEntities: [],
-  selectedId: null,
+  selectedId: '',
 });
 
 const animalProductivityReducer = createReducer(

@@ -1,9 +1,9 @@
-import { Injectable } from "@angular/core";
-import { Actions, createEffect, ofType } from "@ngrx/effects";
-import { of } from "rxjs";
-import { map, catchError, switchMap, tap } from "rxjs/operators";
-import * as AnimalProductivityActions from "./animal-productivity.actions";
-import { DataAccessService } from "./data-access/data-access.service";
+import { Injectable } from '@angular/core';
+import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { of } from 'rxjs';
+import { map, catchError, switchMap, tap } from 'rxjs/operators';
+import * as AnimalProductivityActions from './animal-productivity.actions';
+import { DataAccessService } from './data-access/data-access.service';
 
 @Injectable()
 export class AnimalProductivityEffects {
@@ -12,7 +12,6 @@ export class AnimalProductivityEffects {
       ofType(AnimalProductivityActions.loadAnimals),
       switchMap(() =>
         this.service.getAllAnimals().pipe(
-          tap(console.log),
           map((allAnimals) =>
             AnimalProductivityActions.loadAnimalsSuccess({
               payload: allAnimals,
@@ -31,7 +30,6 @@ export class AnimalProductivityEffects {
       ofType(AnimalProductivityActions.loadAnimalEntities),
       switchMap(() =>
         this.service.getAnimalEnities().pipe(
-          tap(console.log),
           map((animalEntities) =>
             AnimalProductivityActions.loadAnimalEntitiesSuccess({
               payload: animalEntities,

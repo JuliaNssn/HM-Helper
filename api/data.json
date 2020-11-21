@@ -1,0 +1,79 @@
+{
+  "animalTypes": [
+    {
+      "name": "Alpaca",
+      "treatsForFirstLevelUp": {
+        "Treat": 0,
+        "GrainTreat": 15,
+        "VegetableTreat": 15,
+        "NutraTreat": 15
+      },
+      "treats": {
+        "Treat": 0,
+        "GrainTreat": 5,
+        "VegetableTreat": 15,
+        "NutraTreat": 5
+      }
+    },
+    {
+      "name": "Chicken",
+      "treats": {
+        "Treat": 2,
+        "GrainTreat": 4,
+        "VegetableTreat": 15,
+        "NutraTreat": 10
+      }
+    },
+    {
+      "name": "Silkie Chicken",
+      "treats": {
+        "Treat": 1,
+        "GrainTreat": 2,
+        "VegetableTreat": 14,
+        "NutraTreat": 14
+      }
+    },
+    {
+      "name": "Cow",
+      "treats": {
+        "Treat": 7,
+        "GrainTreat": 15,
+        "VegetableTreat": 8,
+        "NutraTreat": 1
+      }
+    },
+    {
+      "name": "Jersey Cow",
+      "treats": {
+        "Treat": 4,
+        "GrainTreat": 20,
+        "VegetableTreat": 6,
+        "NutraTreat": 1
+      }
+    },
+    {
+      "name": "Sheep",
+      "treats": {
+        "Treat": 2,
+        "GrainTreat": 12,
+        "VegetableTreat": 12,
+        "NutraTreat": 5
+      }
+    },
+    {
+      "name": "Suffolk Sheep",
+      "treats": {
+        "Treat": 1,
+        "GrainTreat": 9,
+        "VegetableTreat": 15,
+        "NutraTreat": 6
+      }
+    }
+  ],
+  "animals": [
+    {
+      "id": "1a",
+      "name": "Berta"
+    }
+  ]
+}

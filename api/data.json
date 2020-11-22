@@ -1,28 +1,3 @@
 {
-  "animals": [
-    {
-      "name": "Alpi",
-      "type": "Alpaca",
-      "level": 2,
-      "treatQuantity": {
-        "Treat": 0,
-        "Grain Treat": 15,
-        "Vegetable Treat": 2,
-        "Nutra Treat": 0
-      },
-      "id": "d0111271-b00a-5b18-9e74-7963773936cd"
-    },
-    {
-      "name": "Test",
-      "type": "Alpaca",
-      "level": 2,
-      "treatQuantity": {
-        "Treat": 0,
-        "Grain Treat": 14,
-        "Vegetable Treat": 0,
-        "Nutra Treat": 5
-      },
-      "id": "74535286-bf46-ce4c-8d72-e10dd8dbdb9a"
-    }
-  ]
+  "animals": []
 }

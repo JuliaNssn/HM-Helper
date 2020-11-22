@@ -1,1 +1,12 @@
-<p>Treat Counter</p>
+<div class="row mb-4 mx-2">
+  <h4 class="col-12">Animal Productivity Tracker</h4>
+</div>
+<div class="row mx-2">
+  <app-animal-list
+    [animals]="animals$ | async"
+    (addNewAnimal)="onAddNewAnimal($event)"
+    (increaseTreatQuantitiy)="onIncreaseTreatQuantity($event)"
+    (decreaseTreatQuantitiy)="onDecreaseTreatQuantity($event)"
+    (deleteAnimal)="onDeleteAnimal($event)"
+  ></app-animal-list>
+</div>

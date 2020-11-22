@@ -1,3 +1,7 @@
+export interface AnimalEntityMap {
+  [key: string]: AnimalEntity;
+}
+
 export interface AnimalEntity {
   type: AnimalType;
   treatsForFirstLevelUp?: TreatQuantity;
@@ -5,33 +9,33 @@ export interface AnimalEntity {
 }
 
 export interface TreatQuantity {
-  treat: number;
-  grainTreat: number;
-  vegetableTreat: number;
-  nutraTreat: number;
+  [TreatType.TREAT]: number;
+  [TreatType.GRAIN_TREAT]: number;
+  [TreatType.VEGETABLE_TREAT]: number;
+  [TreatType.NUTRA_TREAT]: number;
 }
 
 export interface Animal {
   id: string;
   name: string;
-  type: AnimalEntity;
+  type: AnimalType;
   level: number;
   treatQuantity: TreatQuantity;
 }
 
 export enum AnimalType {
-  CHICKEN = "chicken",
-  SILKIE_CHICKEN = "silkieChicken",
-  COW = "cow",
-  JERSEY_COW = "jerseyCow",
-  SHEEP = "sheep",
-  SUFFOLK_SHEEP = "suffolkSheep",
-  ALPACA = "alpaca",
+  CHICKEN = 'Chicken',
+  SILKIE_CHICKEN = 'Silkie Chicken',
+  COW = 'Cow',
+  JERSEY_COW = 'Jersey Cow',
+  SHEEP = 'Sheep',
+  SUFFOLK_SHEEP = 'Suffolk Sheep',
+  ALPACA = 'Alpaca',
 }
 
 export enum TreatType {
-  TREAT = "treat",
-  GRAIN_TREAT = "grainTreat",
-  VEGETABLE_TREAT = "vegetableTreat",
-  NUTRA_TREAT = "nutraTreat",
+  TREAT = 'Treat',
+  GRAIN_TREAT = 'Grain Treat',
+  VEGETABLE_TREAT = 'Vegetable Treat',
+  NUTRA_TREAT = 'Nutra Treat',
 }

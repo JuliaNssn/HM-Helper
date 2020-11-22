@@ -25,24 +25,6 @@ export class AnimalProductivityEffects {
     )
   );
 
-  loadAnimalEntities$ = createEffect(() =>
-    this.actions$.pipe(
-      ofType(AnimalProductivityActions.loadAnimalEntities),
-      switchMap(() =>
-        this.service.getAnimalEnities().pipe(
-          map((animalEntities) =>
-            AnimalProductivityActions.loadAnimalEntitiesSuccess({
-              payload: animalEntities,
-            })
-          )
-        )
-      ),
-      catchError((error) => {
-        return of(AnimalProductivityActions.loadAnimalEntitiesFailure(error));
-      })
-    )
-  );
-
   createAnimal$ = createEffect(() =>
     this.actions$.pipe(
       ofType(AnimalProductivityActions.createAnimal),
@@ -87,9 +69,9 @@ export class AnimalProductivityEffects {
       map((action) => action.payload),
       switchMap((payload) =>
         this.service.deleteAnimalById(payload).pipe(
-          map((deletedId) =>
+          map(() =>
             AnimalProductivityActions.deleteAnimalSuccess({
-              payload: deletedId,
+              payload: payload,
             })
           )
         )

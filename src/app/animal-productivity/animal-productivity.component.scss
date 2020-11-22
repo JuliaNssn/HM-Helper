@@ -1,0 +1,15 @@
+:host {
+  width: 100%;
+
+  li {
+    height: 60px;
+    position: relative;
+    margin: 10px 0px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+  li:hover {
+    background-color: #eeeeee;
+  }
+}

@@ -1,0 +1,19 @@
+:host {
+  width: 100%;
+
+  .h-95 {
+    height: 95%;
+  }
+
+  .flex-direction-column {
+    flex-direction: column;
+  }
+
+  .add-new {
+    cursor: pointer;
+  }
+
+  .add-new:hover {
+    background-color: #eee;
+  }
+}

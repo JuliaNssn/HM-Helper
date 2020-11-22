@@ -1,0 +1,58 @@
+<div [formGroup]="formGroup">
+  <div class="row my-3">
+    <label for="name">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      formControlName="name"
+      id="name"
+      placeholder="Enter Name"
+    />
+  </div>
+  <div class="row my-3">
+    <label for="type">Animal Type</label>
+    <div class="w-100 d-flex">
+      <app-value-selection-form-control
+        class="m-auto"
+        [items]="animalTypes"
+        formControlName="type"
+        id="type"
+      ></app-value-selection-form-control>
+    </div>
+  </div>
+  <div class="row my-3">
+    <label for="level">Productivity Level</label
+    ><small id="levelHelp" class="form-text text-muted font-weight-light ml-4"
+      >Every animal starts with Productivity Level 1</small
+    >
+    <div class="w-100 d-flex">
+      <app-number-increase-form-control
+        formControlName="level"
+        [minValue]="1"
+        [maxValue]="5"
+        aria-describedby="levelHelp"
+        class="w-50 m-auto"
+      ></app-number-increase-form-control>
+    </div>
+  </div>
+  <div class="row my-3">
+    <div class="col-6 d-flex">
+      <button
+        type="button"
+        class="btn-primary m-auto w-50"
+        (click)="onCancel()"
+      >
+        Cancel
+      </button>
+    </div>
+    <div class="col-6 d-flex">
+      <button
+        type="button"
+        class="btn-primary m-auto w-50"
+        (click)="onSubmit()"
+      >
+        Submit
+      </button>
+    </div>
+  </div>
+</div>

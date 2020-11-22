@@ -6,7 +6,6 @@ import { Animal, AnimalEntity } from './data-access/data-access.model';
 export const ANIMAL_PRODUCTIVITY_FEATURE_KEY = 'animal-productivity';
 
 export interface State extends EntityState<Animal> {
-  animalEntities: AnimalEntity[];
   selectedId: string;
 }
 
@@ -21,7 +20,6 @@ export const animalProductivityAdapter: EntityAdapter<Animal> = createEntityAdap
 );
 
 export const initialState: State = animalProductivityAdapter.getInitialState({
-  animalEntities: [],
   selectedId: '',
 });
 
@@ -37,13 +35,6 @@ const animalProductivityReducer = createReducer(
   ),
   on(AnimalProductivityActions.deleteAnimalSuccess, (state, { payload }) =>
     animalProductivityAdapter.removeOne(payload, state)
-  ),
-  on(
-    AnimalProductivityActions.loadAnimalEntitiesSuccess,
-    (state, { payload }) => ({
-      ...state,
-      animalEntities: payload,
-    })
   )
 );
 

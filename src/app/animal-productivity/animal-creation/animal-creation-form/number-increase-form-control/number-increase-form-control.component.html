@@ -1,0 +1,22 @@
+<div class="d-flex">
+  <button
+    type="button"
+    class="btn btn-light m-auto"
+    [disabled]="cannotBeDecreased"
+    (click)="decreaseValue()"
+  >
+    -
+  </button>
+  <div class="w-100 d-flex">
+    <span class="m-auto">{{ value }} / {{ maxValue }}</span>
+  </div>
+
+  <button
+    type="button"
+    class="btn btn-light m-auto"
+    [disabled]="cannotBeIncreased"
+    (click)="increaseValue()"
+  >
+    +
+  </button>
+</div>

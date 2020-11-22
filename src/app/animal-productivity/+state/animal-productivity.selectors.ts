@@ -1,10 +1,10 @@
-import { createFeatureSelector, createSelector } from "@ngrx/store";
+import { createFeatureSelector, createSelector } from '@ngrx/store';
 import {
   animalProductivityAdapter,
   AnimalProductivityPartialState,
   ANIMAL_PRODUCTIVITY_FEATURE_KEY,
   State,
-} from "./animal-productivity.reducer";
+} from './animal-productivity.reducer';
 
 const getAnimalProductivityState = createFeatureSelector<
   AnimalProductivityPartialState,
@@ -21,11 +21,6 @@ export const getAnimals = createSelector(
 const getAnimalsEntities = createSelector(
   getAnimalProductivityState,
   (state: State) => selectEntities(state)
-);
-
-export const getAnimalEntities = createSelector(
-  getAnimalProductivityState,
-  (state: State) => state.animalEntities
 );
 
 const getSelectedId = createSelector(
